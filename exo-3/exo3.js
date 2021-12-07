@@ -27,7 +27,10 @@ function getComputerChoice() {
 }
 
 function determineWinner(userChoice, computerChoice) {
-    if (userChoice === computerChoice) {
+    if (userChoice === 'bomb') {
+        return 'Won';
+    }
+    else if (userChoice === computerChoice) {
         result = 'Tied';
     }
     
@@ -40,7 +43,6 @@ function determineWinner(userChoice, computerChoice) {
         }
     }
 
-    
     else if(userChoice === 'paper') {
         if (computerChoice === 'scissors') {
         result = 'Lost';
